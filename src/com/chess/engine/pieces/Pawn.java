@@ -4,16 +4,19 @@ import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.BoardUtils;
 import com.chess.engine.board.Move;
+import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Pawn extends Piece{
+import static com.chess.engine.board.Move.*;
 
-    private final static int[] CANDIDATE_MOVE_COORDINATE = {8};
+public class Pawn extends Piece {
 
-    Pawn(int piecePosition, Alliance pieceAlliance) {
+    private final static int[] CANDIDATE_MOVE_COORDINATE = {8, 16, 7, 9};
+
+    Pawn(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
@@ -22,23 +25,61 @@ public class Pawn extends Piece{
 
         final List<Move> legalMoves = new ArrayList<>();
 
-        for(final int currentCandidateOffset : CANDIDATE_MOVE_COORDINATE){
+        for (final int currentCandidateOffset : CANDIDATE_MOVE_COORDINATE) {
 
             // apply offset to piece position
-            int candidateDestinationCoordinate = this.piecePosition + (this.getPieceAlliance().getDirection() * currentCandidateOffset);
+            final int candidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * currentCandidateOffset);
 
             //ensuring offset is valid tile
-            if(!BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)){
+            if (!BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
                 continue;
             }
 
-            if(currentCandidateOffset == 8 && board.getTile(candidateDestinationCoordinate).isTileOccupied()){
-                //TODO more work to do here!!!!!!
-                legalMoves.add(new Move.MajorMove(board, this, candidateDestinationCoordinate));
+            if (currentCandidateOffset == 8 && board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                //TODO more work to do here (deal with promotions)!!!!!!
+                legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+                // creating an initial pawn jump for the start of any pawns move
+            } else if (currentCandidateOffset == 16 && this.isFirstMove() &&
+                    (BoardUtils.SECOND_ROW[this.piecePosition]) && this.getPieceAlliance().isBlack() ||
+                    (BoardUtils.SEVENTH_ROW[this.piecePosition]) && this.getPieceAlliance().isWhite()) {
+
+                final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8);
+                // ensuring the first tile when pawn jumping is not occupied
+                if (!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() &&
+                        !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                    legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+
+                }
+
+                //ensuring edge cases when ATTACKING (white cant attack on left side when on edge, but black can)
+            } else if (currentCandidateOffset == 7 &&
+                    !((BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||
+                            (BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack())))) {
+                if (board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                    final Piece pieceOnCandidate = board.getTile(candidateDestinationCoordinate).getPiece();
+                    if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
+                        //TODO more work to do here (attacking into a pawn promotion)
+                        legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+
+                    }
+                }
+            } else if (currentCandidateOffset == 9 &&
+                    !((BoardUtils.FIRST_COLUMN[this.piecePosition] && this.pieceAlliance.isWhite() ||
+                            (BoardUtils.EIGHTH_COLUMN[this.piecePosition] && this.pieceAlliance.isBlack())))) {
+                if (board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                    final Piece pieceOnCandidate = board.getTile(candidateDestinationCoordinate).getPiece();
+                    if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
+                        //TODO more work to do here (attacking into a pawn promotion)
+                        legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
+
+                    }
+
+                }
+
             }
 
         }
-
-        return legalMoves;
+        return ImmutableList.copyOf(legalMoves);
     }
+
 }
