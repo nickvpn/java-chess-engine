@@ -52,6 +52,12 @@ public abstract class Tile {
             super(coordinate);
         }
 
+        //tile is not occupied, print as hyphen
+        @Override
+        public String toString(){
+            return "-";
+        }
+
         @Override
         public boolean isTileOccupied() {
             return false;
@@ -71,6 +77,15 @@ public abstract class Tile {
         private OccupiedTile(final int tileCoordinate, final Piece pieceOnTile) {
             super(tileCoordinate);
             this.pieceOnTile = pieceOnTile;
+        }
+
+        //tile is occupied, print as piece
+        //black piece = lowercase
+        //white piece = uppercase
+        @Override
+        public String toString(){
+            return getPiece().getPieceAlliance().isBlack() ? getPiece().toString().toLowerCase() :
+                    getPiece().toString();
         }
 
         @Override

@@ -19,8 +19,8 @@ public class Knight extends Piece{
     // mapping all available move coordinates to the knight, numbers represent the offset of the tile
     private final static int[] CANDIDATE_MOVE_COORDINATES = {-17, -15, -10, -6, 6, 10, 15, 17};
 
-    Knight(int piecePosition, Alliance pieceAlliance) {
-        super(piecePosition, pieceAlliance);
+    public Knight(final Alliance pieceAlliance, final int piecePosition) {
+        super(PieceType.KNIGHT, piecePosition, pieceAlliance);
     }
 
     @Override
@@ -62,6 +62,11 @@ public class Knight extends Piece{
 
         // return all the legal moves
         return ImmutableList.copyOf(legalMoves);
+    }
+
+    @Override
+    public String toString() {
+        return PieceType.KNIGHT.toString();
     }
 
     //edge cases so it doesn't glitch out

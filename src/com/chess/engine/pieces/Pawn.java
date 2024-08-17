@@ -16,8 +16,8 @@ public class Pawn extends Piece {
 
     private final static int[] CANDIDATE_MOVE_COORDINATE = {8, 16, 7, 9};
 
-    Pawn(final int piecePosition, final Alliance pieceAlliance) {
-        super(piecePosition, pieceAlliance);
+    public Pawn(final Alliance pieceAlliance, final int piecePosition) {
+        super(PieceType.PAWN, piecePosition, pieceAlliance);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class Pawn extends Piece {
                     (BoardUtils.SEVENTH_ROW[this.piecePosition]) && this.getPieceAlliance().isWhite()) {
 
                 final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8);
-                // ensuring the first tile when pawn jumping is not occupied
+                // ensuring the first tile when pawn jumping/moving is not occupied
                 if (!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() &&
                         !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                     legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
@@ -80,6 +80,11 @@ public class Pawn extends Piece {
 
         }
         return ImmutableList.copyOf(legalMoves);
+    }
+
+    @Override
+    public String toString() {
+        return PieceType.PAWN.toString();
     }
 
 }
