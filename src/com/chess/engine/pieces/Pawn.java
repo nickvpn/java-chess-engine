@@ -40,8 +40,8 @@ public class Pawn extends Piece {
                 legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
                 // creating an initial pawn jump for the start of any pawns move
             } else if (currentCandidateOffset == 16 && this.isFirstMove() &&
-                    (BoardUtils.SECOND_ROW[this.piecePosition]) && this.getPieceAlliance().isBlack() ||
-                    (BoardUtils.SEVENTH_ROW[this.piecePosition]) && this.getPieceAlliance().isWhite()) {
+                    (BoardUtils.SEVENTH_RANK[this.piecePosition]) && this.getPieceAlliance().isBlack() ||
+                    (BoardUtils.SECOND_RANK[this.piecePosition]) && this.getPieceAlliance().isWhite()) {
 
                 final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8);
                 // ensuring the first tile when pawn jumping/moving is not occupied
