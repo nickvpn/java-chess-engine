@@ -44,8 +44,8 @@ public class Table {
     private Piece humanMovedPiece;
     private BoardDirection boardDirection;
 
-    private final Color lightTileColor = Color.decode("#525555");
-    private final Color darkTileColor = Color.decode("#f8f8f8");
+    private final Color lightTileColor = Color.decode("#f8f8f8");
+    private final Color darkTileColor = Color.decode("#525555");
 
     private final static Dimension OUTER_FRAME_DIMENSION = new Dimension(600,600);
     private final static Dimension BOARD_PANEL_DIMENSION = new Dimension(400, 350);
@@ -122,15 +122,15 @@ public class Table {
 
         preferencesMenu.addSeparator();
 
-        final JCheckBoxMenuItem legalMoveHighligherCheckBox = new JCheckBoxMenuItem("Highlight Legal Moves", false);
-        legalMoveHighligherCheckBox.addActionListener(new ActionListener() {
+        final JCheckBoxMenuItem legalMoveHighlighterCheckBox = new JCheckBoxMenuItem("Highlight Legal Moves", false);
+        legalMoveHighlighterCheckBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                highlightLegalMoves = legalMoveHighligherCheckBox.isSelected();
+                highlightLegalMoves = legalMoveHighlighterCheckBox.isSelected();
             }
         });
 
-        preferencesMenu.add(legalMoveHighligherCheckBox);
+        preferencesMenu.add(legalMoveHighlighterCheckBox);
         return preferencesMenu;
     }
 

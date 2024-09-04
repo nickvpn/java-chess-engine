@@ -58,7 +58,7 @@ public class Knight extends Piece{
 
                     // if the alliance piece is not the same, then consider it as an Attacking Move
                     if(this.pieceAlliance != pieceAlliance){
-                        legalMoves.add(new AttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
+                        legalMoves.add(new MajorAttackMove(board, this, candidateDestinationCoordinate, pieceAtDestination));
                     }
                 }
             }
