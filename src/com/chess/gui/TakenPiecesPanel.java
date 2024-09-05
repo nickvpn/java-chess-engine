@@ -23,6 +23,7 @@ public class TakenPiecesPanel extends JPanel {
     private final JPanel northPanel;
     private final JPanel southPanel;
 
+    private static final long serialVersionUID = 1L;
     private static final Color PANEL_COLOR = Color.decode("#3b3636");
     private static final Dimension TAKEN_PIECES_DIMENSION = new Dimension(40, 80);
     private static final EtchedBorder PANEL_BORDER = new EtchedBorder(EtchedBorder.RAISED);
@@ -78,9 +79,9 @@ public class TakenPiecesPanel extends JPanel {
 
         for(final Piece takenPiece : whiteTakenPieces){
             try{
-                final BufferedImage image = ImageIO.read(new File("art/" + takenPiece.getPieceAlliance().toString().substring(0, 1) + "" + takenPiece.toString()));
+                final BufferedImage image = ImageIO.read(new File("art/" + takenPiece.getPieceAlliance().toString().substring(0, 1) + "" + takenPiece.toString() + ".gif"));
                 final ImageIcon Icon = new ImageIcon(image);
-                final JLabel imageLabel = new JLabel();
+                final JLabel imageLabel = new JLabel(Icon);
                 this.southPanel.add(imageLabel);
             } catch(final IOException e){
                 e.printStackTrace();
@@ -89,9 +90,9 @@ public class TakenPiecesPanel extends JPanel {
 
         for(final Piece takenPiece : blackTakenPieces){
             try{
-                final BufferedImage image = ImageIO.read(new File("art/" + takenPiece.getPieceAlliance().toString().substring(0, 1) + "" + takenPiece.toString()));
+                final BufferedImage image = ImageIO.read(new File("art/" + takenPiece.getPieceAlliance().toString().substring(0, 1) + "" + takenPiece.toString() + ".gif"));
                 final ImageIcon Icon = new ImageIcon(image);
-                final JLabel imageLabel = new JLabel();
+                final JLabel imageLabel = new JLabel(Icon);
                 this.southPanel.add(imageLabel);
             } catch(final IOException e){
                 e.printStackTrace();
