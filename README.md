@@ -14,6 +14,7 @@
 - Minimax image from [R-Bloggers](https://www.r-bloggers.com/2022/07/programming-a-simple-minimax-chess-engine-in-r/)
 
      ![https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/2560px-Minimax.svg.png](https://www.codertime.org/minimax-chess-engine-programming-r/chess_minimax.png)
+  
   Example of minimax search for the best next move (white to move in the current position)
 
 ## Credit
