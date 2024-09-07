@@ -1,10 +1,12 @@
 # JChess - Chess Engine made completely in Java
 Includes Player vs Player, Player vs AI, AI vs AI.
-[Setup Game Window](https://cdn.discordapp.com/attachments/624000511921750087/1282034036948209684/image.png?ex=66dde2bd&is=66dc913d&hm=dd6b84ffa5e41fabc62713a70c3033e8270cab7fbf5cab113e3a059c930f67f2&)
+Setup Game Window:
+![](https://cdn.discordapp.com/attachments/624000511921750087/1282034036948209684/image.png?ex=66dde2bd&is=66dc913d&hm=dd6b84ffa5e41fabc62713a70c3033e8270cab7fbf5cab113e3a059c930f67f2&)
 
 ## AI
 The AI for this project is made possible by utilizing a Minimax search algorithm with a current fixed depth of 4.
-![Minimax image from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/2560px-Minimax.svg.png)
+Minimax image from [R-Bloggers](https://www.r-bloggers.com/)
+![https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/2560px-Minimax.svg.png](https://www.codertime.org/minimax-chess-engine-programming-r/chess_minimax.png)
 
 Highlighted moves and board position are all toggleable!
 
