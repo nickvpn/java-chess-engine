@@ -12,6 +12,6 @@
 - Minimax image from [R-Bloggers](https://www.r-bloggers.com/)
      ![https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/2560px-Minimax.svg.png](https://www.codertime.org/minimax-chess-engine-programming-r/chess_minimax.png)
 
-## Thanks
-Created with help from [amir650](https://www.youtube.com/@amir650) and his Chess Engine guides. Highly recommend if you want to create a working Java Chess Engine.
+## Credit
+Created with help from [amir650](https://www.youtube.com/@amir650) and his Chess Engine guides, with his github repository [here.](https://github.com/amir650/BlackWidow-Chess) Highly recommend if you want to create a working Java Chess Engine.
 
