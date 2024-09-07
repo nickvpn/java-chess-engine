@@ -5,6 +5,7 @@
 ![Test](https://cdn.discordapp.com/attachments/624000511921750087/1282034036948209684/image.png?ex=66dde2bd&is=66dc913d&hm=dd6b84ffa5e41fabc62713a70c3033e8270cab7fbf5cab113e3a059c930f67f2&)
 ## Game in Action
 - Highlighted moves and board position are all toggleable.
+- An example game of AI vs AI:
     ![TEst](https://cdn.discordapp.com/attachments/624000511921750087/1282033749177008230/image.png?ex=66dde278&is=66dc90f8&hm=42d4fbec990b1adb392ba2f37051d116b7e409c0e585dccdd566bc9ad68bcc78&)
 
 ## ChessAI
