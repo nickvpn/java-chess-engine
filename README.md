@@ -1,8 +1,8 @@
 # JChess - Chess Engine made completely in Java
 - src/ contains all code for the project.
 - Includes Player vs Player, Player vs AI, AI vs AI.
-## Setup Game Window
-![Test](https://cdn.discordapp.com/attachments/624000511921750087/1282034036948209684/image.png?ex=66dde2bd&is=66dc913d&hm=dd6b84ffa5e41fabc62713a70c3033e8270cab7fbf5cab113e3a059c930f67f2&)
+
+    ![Test](https://cdn.discordapp.com/attachments/624000511921750087/1282034036948209684/image.png?ex=66dde2bd&is=66dc913d&hm=dd6b84ffa5e41fabc62713a70c3033e8270cab7fbf5cab113e3a059c930f67f2&)
 ## Game in Action
 - Highlighted moves and board position are all toggleable.
 - An example game of AI vs AI:
