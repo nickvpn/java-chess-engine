@@ -11,7 +11,7 @@
 
 ## ChessAI
 - The AI for this project is made possible by utilizing a Minimax search algorithm with a current fixed depth of 4.
-- Minimax image from [R-Bloggers](https://www.r-bloggers.com/)
+- Minimax image from [R-Bloggers](https://www.r-bloggers.com/2022/07/programming-a-simple-minimax-chess-engine-in-r/)
 
      ![https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/2560px-Minimax.svg.png](https://www.codertime.org/minimax-chess-engine-programming-r/chess_minimax.png)
 
