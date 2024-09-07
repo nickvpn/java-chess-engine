@@ -77,6 +77,14 @@ public abstract class Player {
         return !this.isInCheck && !hasEscapeMoves();
     }
 
+    public boolean isKingSideCastleCapable(){
+        return this.playerKing.isKingSideCastleCapable();
+    }
+
+    public boolean isQueenSideCastleCapable(){
+        return this.playerKing.isQueenSideCastleCapable();
+    }
+
     //determining if a king can escape through check
     //go through each of the player moves, make the moves on a new board (imaginary, not real)
     //after we make that move, determine if MoveStatus is Done or not.
