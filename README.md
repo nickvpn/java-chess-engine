@@ -1,5 +1,6 @@
 # JChess - Chess Engine made completely in Java
 Includes Player vs Player, Player vs AI, AI vs AI.
+[Setup Game Window](https://cdn.discordapp.com/attachments/624000511921750087/1282034036948209684/image.png?ex=66dde2bd&is=66dc913d&hm=dd6b84ffa5e41fabc62713a70c3033e8270cab7fbf5cab113e3a059c930f67f2&)
 
 ## AI
 The AI for this project is made possible by utilizing a Minimax search algorithm with a current fixed depth of 4.
