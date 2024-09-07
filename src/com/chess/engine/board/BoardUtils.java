@@ -8,6 +8,7 @@ import java.util.Map;
 //utility class putting constants/methods that are static in here
 public class BoardUtils {
 
+
     public static final boolean[] FIRST_COLUMN = initColumn(0);
     public static final boolean[] SECOND_COLUMN = initColumn(1);
     public static final boolean[] SEVENTH_COLUMN = initColumn(6);

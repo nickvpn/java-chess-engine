@@ -36,7 +36,7 @@ public class Table extends Observable {
     private final MoveLog moveLog;
     private final GameSetup gameSetup;
     private Board chessBoard;
-    private static String defaultPieceImagesPath = "art/";
+    private static String defaultPieceImagesPath = "src/art/";
 
     private boolean highlightLegalMoves;
 
@@ -326,7 +326,7 @@ public class Table extends Observable {
 
     }
 
-    static class MoveLog{
+    public static class MoveLog{
         private final List<Move> moves;
 
         MoveLog(){
@@ -466,7 +466,7 @@ public class Table extends Observable {
                 for(final Move move : pieceLegalMoves(board)){
                     if(move.getDestinationCoordinate() == this.tileId){
                         try{
-                            add(new JLabel(new ImageIcon(ImageIO.read(new File("art/misc/green_dot.png")))));
+                            add(new JLabel(new ImageIcon(ImageIO.read(new File("src/art/misc/green_dot.png")))));
                         } catch(Exception e){
                             e.printStackTrace();
                         }
