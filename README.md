@@ -17,8 +17,12 @@ The engine includes a simple yet effective AI using the Minimax algorithm with a
 ## Example Gameplay
 
 Here is a snapshot of AI vs AI in action:
+
 ![AI vs AI Game](images/zchessboard.png)
+
+
 As well as the options available to the player:
+
 ![Options](images/optionz.png)
 
 ## AI Algorithm
