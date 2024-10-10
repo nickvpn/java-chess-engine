@@ -1,22 +1,50 @@
-# JChess - Chess Engine made completely in Java
-- src/ contains all code for the project.
-- Includes Player vs Player, Player vs AI, AI vs AI.
+# JChess - Java Chess Engine
 
-    ![Test](https://cdn.discordapp.com/attachments/624000511921750087/1282034036948209684/image.png?ex=66dde2bd&is=66dc913d&hm=dd6b84ffa5e41fabc62713a70c3033e8270cab7fbf5cab113e3a059c930f67f2&)
-## Game in Action
-- Highlighted moves and board position are all toggleable.
-- An example game of AI vs AI:
+This project implements a Chess engine entirely in Java, supporting multiple modes of play:
 
-    ![TEst](https://cdn.discordapp.com/attachments/624000511921750087/1282033749177008230/image.png?ex=66dde278&is=66dc90f8&hm=42d4fbec990b1adb392ba2f37051d116b7e409c0e585dccdd566bc9ad68bcc78&)
+- **Player vs Player**
+- **Player vs AI**
+- **AI vs AI**
 
-## ChessAI
-- The AI for this project is made possible by utilizing a Minimax search algorithm with a current fixed depth of 4.
-- Minimax image from [R-Bloggers](https://www.r-bloggers.com/2022/07/programming-a-simple-minimax-chess-engine-in-r/)
+The engine includes a simple yet effective AI using the Minimax algorithm with a fixed depth search of 4. You can explore the project and the codebase in the `src/` folder.
 
-     ![https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/2560px-Minimax.svg.png](https://www.codertime.org/minimax-chess-engine-programming-r/chess_minimax.png)
-  
-  Example of minimax search for the best next move (white to move in the current position)
+## Features
+
+- **Game Modes**: Play against another player or challenge the AI in single-player mode. You can also watch AI vs AI matches.
+- **Move Highlights**: Toggle the highlighting of valid moves and the current board position.
+- **AI Implementation**: The AI uses a Minimax algorithm to evaluate and select optimal moves, providing a challenging opponent.
+
+## Example Gameplay
+
+Here is a snapshot of AI vs AI in action:
+![AI vs AI Game](images/zchessboard.png)
+As well as the options available to the player:
+![Options](images/optionz.png)
+
+## AI Algorithm
+
+The AI's decision-making is powered by the Minimax algorithm, with a current search depth of 4. Below is an illustration of the Minimax decision tree used to determine the best move:
+
+![Minimax Algorithm](https://www.codertime.org/minimax-chess-engine-programming-r/chess_minimax.png)
+
+For more on Minimax, see this guide on [R-Bloggers](https://www.r-bloggers.com/2022/07/programming-a-simple-minimax-chess-engine-in-r/).
+
+## Prerequisites
+
+To run the chess engine, ensure you have the following installed:
+- Java 8 or higher
+
+## Installation
+
+To run the project locally, follow these steps:
+1. Clone the repository to your local machine.
+2. Navigate to the `src/` directory.
+3. Compile and run the Java files using your preferred Java IDE or the command line.
+
+```bash
+javac ChessMain.java
+java ChessMain
+```
 
 ## Credit
-Created with help from [amir650](https://www.youtube.com/@amir650) and his Chess Engine guides, with his github repository [here.](https://github.com/amir650/BlackWidow-Chess) Highly recommend if you want to create a working Java Chess Engine or sharpen your skills in OOP.
-
+Special thanks to [amir650](https://www.youtube.com/@amir650)  for his Chess Engine guides. You can find his repository and tutorials [here.](https://github.com/amir650/BlackWidow-Chess) Highly recommended for anyone wanting to build a Java-based chess engine or sharpen their Object-Oriented Programming (OOP) skills.
