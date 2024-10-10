@@ -6,7 +6,7 @@ This project implements a Chess engine entirely in Java, supporting multiple mod
 - **Player vs AI**
 - **AI vs AI**
 
-The engine includes a simple yet effective AI using the Minimax algorithm with a fixed depth search of 4. You can explore the project and the codebase in the `src/` folder.
+You can explore the project and the codebase in the `src/` folder.
 
 ## Features
 
