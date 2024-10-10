@@ -43,12 +43,7 @@ To run the chess engine, ensure you have the following installed:
 To run the project locally, follow these steps:
 1. Clone the repository to your local machine.
 2. Navigate to the `src/` directory.
-3. Compile and run the Java files using your preferred Java IDE or the command line.
-
-```bash
-javac JChess.java
-java JChess
-```
+3. Compile and run the Java files using your preferred Java IDE.
 
 ## Credit
 Special thanks to [amir650](https://www.youtube.com/@amir650)  for his Chess Engine guides. You can find his repository and tutorials [here.](https://github.com/amir650/BlackWidow-Chess) Highly recommended for anyone wanting to build a Java-based chess engine or sharpen their Object-Oriented Programming (OOP) skills.
