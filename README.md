@@ -46,8 +46,8 @@ To run the project locally, follow these steps:
 3. Compile and run the Java files using your preferred Java IDE or the command line.
 
 ```bash
-javac ChessMain.java
-java ChessMain
+javac JChess.java
+java JChess
 ```
 
 ## Credit
